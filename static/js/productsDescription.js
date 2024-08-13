@@ -13,7 +13,7 @@ function OpenDialog() {
 function CloseDialog() {
     const close= new Dialog() //close ცვლადში შემომაქ კლასი დიალოგი
     close.Close() //close ცვლადის/დიალოგის ოფენ ფუნქციას ვიძახებ- მოდის class.js დან
-    console.log("Close function executed");
+   
 }
 
 document.getElementById("OpenDialog").addEventListener("click", OpenDialog);

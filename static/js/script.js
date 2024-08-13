@@ -39,8 +39,8 @@ new DataTable('#example', {
     language: {
         paginate: {  // ეს არის გვერდებზე გადასასვლელი ღილაკები
             
-            previous: '<button class="isrebi_1"><img src="../static/icon/left.png" alt="err" >  </button>', //ესაა ისრებით ჩანაცვლება 
-            next: '<button class="isrebi_1"><img src="../static/icon/right.png" alt="err" >  </button>', // ესაა ისრებით ჩანაცვლება 
+            previous: '<button class="isrebi_1"><img src="static/icon/left.png" alt="<" >  </button>', //ესაა ისრებით ჩანაცვლება 
+            next: '<button class="isrebi_1"><img src="static/icon/right.png" alt=">" >  </button>', // ესაა ისრებით ჩანაცვლება 
         }
     },
     
