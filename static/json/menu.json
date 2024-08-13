@@ -1,0 +1,237 @@
+{
+  "parents": [
+    {
+      "id": "72",
+      "parent": "0",
+      "page_id": "68",
+      "position": "1",
+      "title": "",
+      "url": "",
+      "icon": "static/icon/logo.svg",
+      "class": "home",
+      "childs": []
+    },
+    {
+      "id": "72",
+      "parent": "0",
+      "page_id": "68",
+      "position": "1",
+      "title": "მთავარი",
+      "url": "",
+      "icon": "static/icon/icon.svg",
+      "class": "home",
+      "childs": []
+    },
+    {
+      "id": "70",
+      "parent": "0",
+      "page_id": "65",
+      "position": "2",
+      "title": "მომართვები",
+      "url": "",
+      "icon": "static/icon/people.svg",
+      "class": "menu_book",
+      "childs": []
+    },
+    {
+      "id": "80",
+      "parent": "0",
+      "page_id": "76",
+      "position": "4",
+      "title": "დავალებები",
+      "url": "",
+      "icon": "static/icon/icon3.svg",
+      "class": "task",
+      "childs": []
+    },
+    {
+      "id": "8",
+      "parent": "0",
+      "page_id": "0",
+      "position": "5",
+      "title": "პარამეტრები",
+      "url": "#",
+      "icon": "static/icon/icon4.svg",
+      "class": "settings",
+      "childs": [
+        {
+          "id": "33",
+          "page_id": "33",
+          "position": "1",
+          "title": "ჯგუფები"
+        },
+        {
+          "id": "34",
+          "page_id": "34",
+          "position": "2",
+          "title": "თანამშრომლები"
+        },
+        {
+          "id": "53",
+          "page_id": "52",
+          "position": "3",
+          "title": "პროფილი"
+        },
+        {
+          "id": "51",
+          "page_id": "50",
+          "position": "4",
+          "title": "თარგმნა"
+        },
+        {
+          "id": "49",
+          "page_id": "48",
+          "position": "5",
+          "title": "კომპონენტები"
+        },
+        {
+          "id": "54",
+          "page_id": "54",
+          "position": "6",
+          "title": "ცნობარი"
+        },
+        {
+          "id": "62",
+          "page_id": "58",
+          "position": "7",
+          "title": "ქარდი & ბორდი"
+        },
+        {
+          "id": "78",
+          "page_id": "74",
+          "position": "8",
+          "title": "სიახლეები"
+        },
+        {
+          "id": "88",
+          "page_id": "83",
+          "position": "25",
+          "title": "ჯგუფები და გვერდები"
+        },
+        {
+          "id": "84",
+          "page_id": "80",
+          "position": "25",
+          "title": "გვერდები და ტაბები"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "parent": "0",
+      "page_id": "0",
+      "position": "11",
+      "title": "რეპორტები",
+      "url": "#",
+      "icon": "static/icon/icon4.svg",
+      "class": "bar_chart_4_bars",
+      "childs": [
+        {
+          "id": "73",
+          "page_id": "69",
+          "position": "1",
+          "title": "KPI"
+        },
+        {
+          "id": "74",
+          "page_id": "70",
+          "position": "2",
+          "title": "კატეგორიები "
+        },
+        {
+          "id": "75",
+          "page_id": "71",
+          "position": "3",
+          "title": "ქოლბექ ზარები"
+        },
+        {
+          "id": "76",
+          "page_id": "72",
+          "position": "4",
+          "title": "გამავალი ზარები"
+        },
+        {
+          "id": "83",
+          "page_id": "79",
+          "position": "6",
+          "title": "გამოტოვებული ზარები"
+        },
+        {
+          "id": "77",
+          "page_id": "73",
+          "position": "7",
+          "title": "SMS"
+        },
+        {
+          "id": "120",
+          "page_id": "163",
+          "position": "8",
+          "title": "Tree"
+        },
+        {
+          "id": "126",
+          "page_id": "176",
+          "position": "9",
+          "title": "timeline"
+        }
+      ]
+    },
+    {
+      "id": "85",
+      "parent": "0",
+      "page_id": "0",
+      "position": "12",
+      "title": "შაბლონი",
+      "url": "#",
+      "icon": "static/icon/icon5.svg",
+      "class": "space_dashboard",
+      "childs": [
+        {
+          "id": "90",
+          "page_id": "85",
+          "position": "2",
+          "title": "დეშბორდის შაბლონი"
+        },
+        {
+          "id": "91",
+          "page_id": "86",
+          "position": "3",
+          "title": "რეპორტის შაბლონი"
+        }
+      ]
+    },
+    {
+      "id": "121",
+      "parent": "0",
+      "page_id": "0",
+      "position": "13",
+      "title": "test",
+      "url": "#",
+      "icon": "static/icon/icon6.svg",
+      "class": null,
+      "childs": []
+    },
+    {
+      "id": "122",
+      "parent": "0",
+      "page_id": "0",
+      "position": "14",
+      "title": "test",
+      "url": "#",
+      "icon": "static/icon/icon6.svg",
+      "class": "test",
+      "childs": []
+    },
+    {
+      "id": "124",
+      "parent": "0",
+      "page_id": "0",
+      "position": "15",
+      "title": "ragaca",
+      "url": "#",
+      "icon": "static/icon/icon7.svg",
+      "class": "icom",
+      "childs": []
+    }
+  ]
+}

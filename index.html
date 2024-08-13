@@ -3,49 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="asest/script.js"></script>
-    <link rel="stylesheet" href="asest/styles.css">
-    <link rel="stylesheet" href="styles.css">
+    <title> Project-update-delete</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
    
+    <!-- აქ იწყება დატა table ლინკები -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+    
+   
+    <!-- აქ იწყება jquery ui  ლინკები -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    
+    <!-- აქ იწყება იკონებისთვის საჭირო ლინკები -->   
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
-    <script src="asest/dialog.js"></script>
+    <script src="https://kit.fontawesome.com/1d053174e8.js" crossorigin="anonymous"></script>
+
+    <!--ჩემი შექმნილი ლიკები/სკრიპტები-->
+   
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/menu.css">
 </head>
+
+
 <body>
+   
     <div class="section1">
-        
         <div class="setin1_wrapper">
+           
     
             <div class="section1_wrapperleft">
-            <div id="menu-container"></div>
-        </div>
-   
-    <div  class="section1_wrapperright">
-        <div class="s1_w_r_header">
-            <div class="s1_w_r_h_infut1">
-                <label for="date1_input">თარიღი დან</label>
-                <input type="date" id="date1" name="date1_input" value="2022-12-12" required>
+                <div id="menu-container"></div>
             </div>
-            <div class="s1_w_r_h_infut2">
-                <label for="date2_input">თარიღი მდე</label>
-                <input  type="date" id="date1" name="date2_input" value="2023-12-12" required>
+          
 
-            </div>
-            
-            <div class="s1_w_r_buttons">
-                <button onclick="#" class="s1_button1_filtr"><img src="icon/filtri.svg" alt="err" ></button>
-                <!-- ეს ქვედა არის თოგლე ღილაკი, ამზე კლიკით იხსნბა დილოგის ფნჯრა, ნახე ჯსში, წვდბა იდით-->
-                <button type="button" class="s1_button2_add" id="toggleButton" > <img src="icon/add.svg" alt="err"></button>
-                <button type="submit" class="s1_button3_washla"> <img src="icon/washla.svg" alt="err" ></button>
+            <div  class="section1_wrapperright">
+                <!-- ეს ფორმა უბრლო როუტია, წაშლის ღილაკმა რო მოიხვდეს იმუშაო-->
+            <form action="/delete" method="post"> 
+                <div class="s1_w_r_header">
+                    <div class="s1_w_r_h_infut1">
+                        <label for="date1_input">თარიღი დან</label>
+                        <input type="date" id="date1" name="date1_input" value="2022-12-12" class="date-input" required>
+                    </div>
+                    <div class="s1_w_r_h_infut2">
+                        <label for="date2_input">თარიღი მდე</label>
+                        <input  type="date" id="date1" name="date2_input" value="2023-12-12"  class="date-input"required>
+
+                    </div>
+                    
+                    <div class="s1_w_r_buttons">
+                        <button  type="button" class="s1_button1_filtr" id='toggleButton2'><img src="../static/icon/filtri.svg" alt="err" ></button>
+                        <!-- ეს ქვედა არის თოგლე ღილაკი, ამზე კლიკით იხსნბა დილოგის ფნჯრა, ნახე ჯსში, წვდბა იდით-->
+                        <button type="button" class="s1_button2_add" id="toggleButton" > <img src="static/icon/add.svg" alt="err"></button>
+                        <button type="submit" class="s1_button3_washla"> <img src="../static/icon/washla.svg" alt="err" ></button>
+                    </div>
+                 </div>
+            </form>
+                <!--დატა ბასედან წამოღებული თებლია ეს თუ მეტი ინფო გინდა მეტი დაწერე-->
+                
+                    <table id="example" class="  hover row-border " style="width:100%">
+                        <thead class="thead1">
+                            <tr >
+                                <!-- აქ ჩაშენბულ ინფუთს უყურებს ჯქუერი,ჯს ში 4-7 ხაზი, ჩეკავს ყველას-->
+                             
+                                <th class='thead1_tr1'> <input type="checkbox" id="selectAll" class="thead_checkbox"> </th>
+                                <th class="thead_tr_name"> სახელი</th>
+                                <th class="thead_th_firstName">გვარი</th>
+                                <th>სულ</th>
+                                <th>სათაური1</th>
+                                <th>სათაური2</th>
+                                <th>სათაური3</th>
+                                <th>სათაური4</th>
+                                
+                            </tr>
+                            
+                        </thead>
+                        <!-- ეს  დატაბასეს ამბვში დამჭირდა, ამით იქმნბა ინფუტები ინდვ ძებნის-->
+                       <!--<tfoot class="footer1" style="display:table-header-group;" >
+                            <tr class="tr1">
+                                <th>id</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                                <th>Actions</th>
+                                <th>Actions</th>
+                                <th>Actions</th>
+                            </tr>--> 
+                        </tfoot>  
+                        <tbody>
+                        
+                        <!--აქ ხდება რენდერი, მოაქ ბაზიდნ იქ არსებულ ინფორმცია და ბეჭდავს ლუპი დამჭირდა-->
+                            
+                            <tr>
+                                <!-- <td>119</td> -->
+                                
+                                <td> <input type="checkbox" name="person" value="119" class="checkboxid"> </td>
+                                <td> zoro</td>
+                                <td>wfr</td>
+                                <td>3</td>
+                                <td>q</td>
+                                <td>q</td>
+                                <td>q</td>
+                                <td>q</td>
+                                
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                    <div style="margin-left: 400px;display: flex; margin-top: 100px;">
+                        <button><a href="pages/productsDescription.html" >class product</a></button>
+                        <button  style="margin-left: 150px;"> <a href="pages/userRegistracion.html">class user</a></button>
+                    </div>
+                
             </div>
         </div>
 
-      
-        
-         
-        </div>
     </div>
+    <!-- ------dialog gverdi------------------------------------------------------->
+    <div class="container mt-5" id="dialog_wrapper" style="width: 500px !important">
+           
+        <!--აქ არის დამატების forma ღილაკი zemot მიწერია იდით ნახავ toggleButton მიბული მაქ ეს ფორმა-->
+       <!-- jquery ui დიალოგის დივში ჩავსვი ფორმა ,  ჯქუერის ვაიმპორტებ ლინკებით -->
+       <div id="dialog" title="დიალოგი"  style="   background-color: white !important" >
+            <!-- ამ ფორმის აქტივობას მივაბი add როუტი  რომელი შემდეგ ხვდება ლეიბლებს სახლებით-->
+            <form id="registrationForm" style="display:none" action="/add" method="post">
+              
+                <div> <p class='dialog_header_text'> ძირითადი ინფორმაცია</p> </div>
+                
+                <!-- ამ ფორმას firstName,astName,age, თი წვდება პითონის ცვლადი და ინახვს ველიუს -->
+                <div class="dialog_div1">
+                    <div class="form-group">
+                        <label for="firstName">სახელი</label>
+                        <input class="d_input" type="text" name="firstName" placeholder="სახელი" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">გვარი</label>
+                        <input class="d_input" type="text" name="lastName" placeholder="გვარი" required>
+                    </div>
+                    <div class="form-group">
+                        <div><label for="age">პასუხისმგებელი პირი</label></div>
+                        <input class="d_input" type="number" name="age" placeholder="გულნარი ტერაშვილი" required>
+                    </div>
+                </div>
+                <div class="dialog_div2">
+                    <div class="form-group">
+                        <div><label for="title1">იურიდიული მისამართი</label></div>
+                        <input class="d_input" type="text" name="title1" placeholder="თბილისი" required>
+                    </div>
+                    <div class="form-group">
+                        <div><label for="title2">ტელეფონი</label></div>
+                        <input class="d_input" type="text" name="title2" placeholder="2 555 555" required>
+                    </div>
+                    <div class="form-group">
+                        <div><label for="title3">ელ ფოსტა</label></div>
+                        <input class="d_input" type="text" name="title3" required>
+                    </div>
+                </div>
+                <div class="dialog_div2">
+                    <div class="form-group">
+                        <div><label for="title4">იურდიული სტატუსი</label></div>
+                        <input class="d_input" type="text" name="title4" placeholder="კომპანია" required>
+                    </div>
+                      <!-- ამ ქვედა ორ ინფუთს არ ამტებს , რადგან არ მაქ ლოიკა გაწერილი,
+                       არ იღებს ბაზა ამ მონცმებს, არც პითონი იღებს ამათგან ინფოს ამიტო არ ჭედავს ხალსტოიზე შეყავს-->
+                    <div class="form-group">
+                        <div><label for="title4">ბიზნეს ტიპი</label></div>
+                        <input class="d_input" type="text" name="title5" placeholder="კომპანია" required>
+                    </div>
+                    <div class="form-group">
+                        <div><label for="title4">ფაქტიური მისამართი</label></div>
+                        <input class="d_input" type="text" name="title6" required>
+                    </div>
+                </div>  
+                
+                <div class="d_buttons"> 
+                    <button id="closeDialogBtn"class="close_dialog">დახურვა</button>
+                    <input type="submit" value="შენახვა" class="d_add_button">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <script  src="static/js/script.js"></script>
+    <script src="static/js/menu.js"></script>
 </body>
 </html>
+    

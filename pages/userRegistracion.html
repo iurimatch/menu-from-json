@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- აქ იწყება jquery ui  ლინკები -->
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="/resources/demos/style.css">
+      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+      <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+     <!-- ჩემი შექმნილი ფაილების დამტება -->
+    <link rel="stylesheet" href="userRegistracion.css">
+    <link rel="stylesheet" href="../static/css/dialog.css">
+</head>
+<body>
+    <div class="userRegistracion">User registracia</div>
+    <button  id="OpenDialog" class="s1_button2_add">Oopen Dialog</button>
+  
+    <div class="container mt-5" id="dialog_wrapper" style="width: 500px !important">
+                   
+        <!--აქ არის დამატების forma ღილაკი zemot მიწერია იდით ნახავ toggleButton მიბული მაქ ეს ფორმა-->
+        <!-- jquery ui დიალოგის დივში ჩავსვი ფორმა ,  ჯქუერის ვაიმპორტებ ლინკებით -->
+        <div id="dialog" title="დიალოგი"  style="   background-color: white !important" >
+            <!-- ამ ფორმის აქტივობას მივაბი add როუტი  რომელი შემდეგ ხვდება ლეიბლებს სახლებით-->
+            <form id="registrationForm" style="display:none" action="/add" method="post">
+                
+                <div> <p class='dialog_header_text'> ძირითადი ინფორმაცია</p> </div>
+                
+                <!-- ამ ფორმას firstName,astName,age, თი წვდება პითონის ცვლადი და ინახვს ველიუს -->
+                <div class="dialog_div1">
+                    <div class="form-group">
+                        <label for="firstName">სახელი</label>
+                        <input class="d_input" type="text" name="firstName" placeholder="სახელი" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">გვარი</label>
+                        <input class="d_input" type="text" name="lastName" placeholder="გვარი" required>
+                    </div>
+                    <div class="form-group">
+                        <div><label for="age">პასუხისმგებელი პირი</label></div>
+                        <input class="d_input" type="number" name="age" placeholder="გულნარი ტერაშვილი" required>
+                    </div>
+                </div>
+                <div class="dialog_div2">
+                    <div class="form-group">
+                        <div><label for="title1">იურიდიული მისამართი</label></div>
+                        <input class="d_input" type="text" name="title1" placeholder="თბილისი" required>
+                    </div>
+                    <div class="form-group">
+                        <div><label for="title2">ტელეფონი</label></div>
+                        <input class="d_input" type="text" name="title2" placeholder="2 555 555" required>
+                    </div>
+                    <div class="form-group">
+                        <div><label for="title3">ელ ფოსტა</label></div>
+                        <input class="d_input" type="text" name="title3" required>
+                    </div>
+                </div>
+                <div class="dialog_div2">
+                    <div class="form-group">
+                        <div><label for="title4">იურდიული სტატუსი</label></div>
+                        <input class="d_input" type="text" name="title4" placeholder="კომპანია" required>
+                    </div>
+                        <!-- ამ ქვედა ორ ინფუთს არ ამტებს , რადგან არ მაქ ლოიკა გაწერილი,
+                        არ იღებს ბაზა ამ მონცმებს, არც პითონი იღებს ამათგან ინფოს ამიტო არ ჭედავს ხალსტოიზე შეყავს-->
+                    <div class="form-group">
+                        <div><label for="title4">ბიზნეს ტიპი</label></div>
+                        <input class="d_input" type="text" name="title5" placeholder="კომპანია" required>
+                    </div>
+                    <div class="form-group">
+                        <div><label for="title4">ფაქტიური მისამართი</label></div>
+                        <input class="d_input" type="text" name="title6" required>
+                    </div>
+                </div>  
+                
+                <div class="d_buttons"> 
+                    <button id="closeDialogBtn"class="close_dialog" type="button" >დახურვა</button>
+                    <input type="submit" value="შენახვა" class="d_add_button">
+                </div>
+            </form>
+        </div>
+               
+          
+    </div>
+
+    <script async src="../static/js/userRegistracion.js"  type="module"></script>
+</body>
+</html>

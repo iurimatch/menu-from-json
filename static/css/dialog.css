@@ -1,0 +1,158 @@
+
+/*-------------------- დიალოგის სტილები   ------------------  */
+#dialog{
+    background-color: #F0F3FF;
+    border-radius: 7PX;
+}
+ #registrationForm{
+    max-width: 1012px;
+    height: 364px;
+   background-color: white;
+    border-radius: 8px;
+    border:2px solid rgb(230, 223, 223)
+ }
+.dialog_header_text{
+    max-width: 248px;
+    height: 24px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+    font-family: FiraGO;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+   color: #7985AD;
+    
+
+}
+.thead1{
+    background-color:  #F5F5FA;
+   
+    
+
+}
+.ui-widget-header {
+    background-color: white !important;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #7985AD;
+    border-radius: 6px;
+    background-color: white;
+    color: #7985AD;
+}
+.ui-dialog .ui-dialog-titlebar-close::before {
+    content: "X";
+     
+    color: #7985AD;
+
+     
+}
+
+.dialog_div1{
+    width: 95%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    
+}
+.dialog_div2{
+    width: 95%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    
+    margin-top: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.d_input{
+
+    width: 304PX;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #EBEBEB;
+
+}
+.d_input::placeholder{
+    min-width: 74px;
+    height: 24px;
+    
+    padding-left: 15px;
+
+    font-family: firango;
+    font-weight: 400;
+    size: 16px;
+    line-height: 24px;
+    color: #999CA0;
+}
+
+.d_buttons{
+    display: flex;
+    width: 99%;
+    height: auto;
+    justify-content: flex-end;
+}
+.d_add_button{
+    width: 101px;
+    height: 48px;
+    border-radius:7px;
+    Padding :9px, 20px, 9px, 20px;
+    margin-top: 30px;
+    background-color:#478221;
+    color: white;
+}
+
+.close_dialog{
+    width: 101px;
+    height: 48px;
+    border-radius:7px;
+    Padding :9px, 20px, 9px, 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+    background-color: #4E46B4;
+    color: white;
+}
+
+
+
+
+
+
+/* დიალოგის დახურვის ღილაკის სტილი */
+.ui-dialog .ui-dialog-titlebar-close{
+    /* display: none; */
+    
+    background-color:none;
+}
+
+/* დიალოგში ჩასმული ღილაკის, დამატების სტილები */
+.adddatabutton{
+    background-color: green;
+    color: white;
+    margin-top: 5px;
+}
+
+#selectAll::before{
+    display: none;
+    background-color: #478221
+    ;
+}
+#selectAll::after{
+    display: none;
+
+}
+
+.thead>tr>th.sorting_asc:after{
+    background-color: #478221;
+    margin-left: 100px;
+}
